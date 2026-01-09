@@ -4,9 +4,13 @@
 int main(int argc, char *argv[]) {
   // Flush after every printf
   setbuf(stdout, NULL);
-
+  // char s[100];
+  // scanf("%s",&s);
+  // s=argv;
   // TODO: Uncomment the code below to pass the first stage
-  printf("$ ");
-
+  if(*argv=="$ ")
+    printf("$ ");
+  else 
+    printf("command not found");
   return 0;
 }
