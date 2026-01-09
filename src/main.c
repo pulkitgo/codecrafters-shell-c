@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
   scanf("%s",&s);
   // s=argv;
   // TODO: Uncomment the code below to pass the first stage
-  if(*argv=="$ ")
+  if(s=="$ ")
     printf("$ ");
   else 
     printf("command not found");
