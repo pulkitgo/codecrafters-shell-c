@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
         while(i<strlen(s) && s[i]==' ') i++;
         for(;i<strlen(s);i++)
           printf("%c",s[i]);
-        break;
+        // break;
       }
     }
     printf("%s: command not found\n", s);
