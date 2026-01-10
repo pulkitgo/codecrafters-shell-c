@@ -9,11 +9,21 @@ int main(int argc, char *argv[]) {
   {
     printf("$ ");
   
-    scanf("%99s",&s);
-    // printf("%d",strlen(s));
-    // s[strlen(s)]='\0';
+    // scanf("%99s",&s);
+    fgets(s,99,stdin);
     if(strcmp(s,"exit")==0)
       break;
+    if(strlen(s)>=4)
+    {
+      if(s[0]=='e' && s[1]=='c' && s[2]=='h' && s[3]=='o')
+      {
+        int i=4;
+        while(i<strlen(s) && s[i]==' ') i++;
+        for(;i<strlen(s);i++)
+          printf("%c",s[i]);
+        break;
+      }
+    }
     printf("%s: command not found\n", s);
   }
   return 0;
