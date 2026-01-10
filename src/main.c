@@ -10,8 +10,8 @@ int main(int argc, char *argv[]) {
     printf("$ ");
   
     scanf("%99s",&s);
-    // s=argv;
-    // TODO: Uncomment the code below to pass the first stage
+    if(s=="exit")
+      break;
     printf("%s: command not found\n", s);
   }
   return 0;
