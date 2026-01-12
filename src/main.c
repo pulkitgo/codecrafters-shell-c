@@ -63,8 +63,9 @@ int main(int argc, char *argv[]) {
         }
         if(s[i]==' ')c=1;
       }
+      
       ss[strcspn(ss,"\n")]=0;
-      if(strcmp(ss,"echo")==0 || strcmp(ss,"exit")==0)
+      if(strcmp(ss,"echo")==0 || strcmp(ss,"exit")==0 || strcmp(ss,"type")==0)
         printf("%s is a shell builtin\n");
       else  
         printf("%s: not found\n");
