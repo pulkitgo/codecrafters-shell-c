@@ -10,21 +10,22 @@ int main(int argc, char *argv[]) {
     printf("$ ");
   
     // scanf("%99s",&s);
-    fgets(s,99,stdin);
+    fgets(s,sizeof(s),stdin);
+    s[strcspn(s, "\n")] = 0;
     if(strcmp(s,"exit")==0)
       break;
-    if(strlen(s)>=4)
+    // printf("%d\n",strlen(s));
+    if(s[0]=='e' && s[1]=='c' && s[2]=='h' && s[3]=='o')
     {
-      if(s[0]=='e' && s[1]=='c' && s[2]=='h' && s[3]=='o')
-      {
-        int i=4;
-        while(i<strlen(s) && s[i]==' ') i++;
-        for(;i<strlen(s);i++)
-          printf("%c",s[i]);
-        // break;
-      }
+      int i=4;
+      while(i<strlen(s) && s[i]==' ')
+        i++;
+      while(i<strlen(s))
+        printf("%c",s[i++]);
+      printf("\n");
     }
-    else printf("%s: command not found\n", s);
+    else 
+    printf("%s: command not found\n", s);
   }
   return 0;
 }
